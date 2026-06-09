@@ -6,6 +6,35 @@ let computerScore = 0;
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
+// Function that takes two choices and outputs the results of the round
+function playRound(computerChoice, humanChoice) {
+    // SET humanChoice TO case-insensitive
+
+    // SET parameters TO local variables
+
+    // IF computerChoice IS same as humanChoice THEN
+        // Print "Tie!"
+
+    // ELSE IF computerChoice IS rock AND humanChoice IS paper THEN
+        // PRINT "You win! Paper beats Rock"
+
+    // ELSE IF computerChoice IS rock AND humanChoice IS scissors THEN
+        // PRINT "You lose! Rock beats scissors"
+
+    // ELSE IF computerChoice IS paper AND humanChoice IS rock THEN
+        // PRINT "You lose! Paper beats Rock"
+    
+    // ELSE IF computerChoice IS paper And humanChoice IS scissors THEN
+        // PRINT "You win! Scissors beats Paper"
+    
+    // ELSE IF computerChoice IS scissors AND humanChoice IS paper THEN
+        // PRINT "You lose! Scissors beats Paper"
+
+    // ELSE computerChoice IS paper AND humanChoice IS scissors THEN 
+        // PRINT "You win! Scissors beats paper"
+}
+
+
 
 // Function that randomly returns "rock", "paper", or "scissors"
 function getComputerChoice() {
