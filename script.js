@@ -25,3 +25,15 @@ function getComputerChoice() {
         return "scissors";
     }
 }
+
+// Function that gets user input and returns a valid choice 
+    // SET userInput TO user input with prompt
+
+    // IF userInput IS rock THEN
+        // RETURN "rock"
+        
+    // IF userInput IS paper THEN
+        // RETURN "paper"
+        
+    // IF userInput IS scissors THEN
+        // RETURN "scissors"
