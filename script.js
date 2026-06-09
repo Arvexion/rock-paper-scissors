@@ -10,8 +10,6 @@ const computerSelection = getComputerChoice();
 function playRound(computerChoice, humanChoice) {
     // SET humanChoice TO case-insensitive
 
-    // SET parameters TO local variables
-
     // IF computerChoice IS same as humanChoice THEN
         // Print "Tie!"
 
