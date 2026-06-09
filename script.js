@@ -1,12 +1,24 @@
-// Declare score variables
+// SET score variables
 let humanScore = 0;
 let computerScore = 0;
 
-// Declare parameters for both choices
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+// Starts the game
+playGame();
 
-playRound(humanSelection, computerSelection);
+// Function that plays the game 5 times
+function playGame() {
+    // Number of rounds
+    const ROUNDS = 5;
+
+    // LOOP round 5 times
+    for (let i = 0; i < ROUNDS; i++) {
+        // Declare parameters for both choices
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+
+        playRound(humanSelection, computerSelection);
+    }
+}
 
 // Function that takes two choices and outputs the results of the output
 function playRound(computerChoice, humanChoice) {
@@ -61,7 +73,6 @@ function playRound(computerChoice, humanChoice) {
         humanScore++;
     }
 }
-
 
 
 // Function that randomly returns "rock", "paper", or "scissors"
