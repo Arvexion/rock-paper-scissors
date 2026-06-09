@@ -6,30 +6,60 @@ let computerScore = 0;
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
+playRound(humanSelection, computerSelection);
+
 // Function that takes two choices and outputs the results of the output
 function playRound(computerChoice, humanChoice) {
     // SET humanChoice TO case-insensitive
+    humanChoice = humanChoice.toLowerCase();
 
     // IF computerChoice IS same as humanChoice THEN
+    if (computerChoice === humanChoice) {
         // Print "Tie!"
+        console.log("Tie!");
+    }
 
     // ELSE IF computerChoice IS rock AND humanChoice IS paper THEN
-        // PRINT "You win! Paper beats Rock"
-
+    else if ((computerChoice === "rock") && (humanChoice === "paper")) {
+         // PRINT "You win! Paper beats Rock"
+        console.log("You win! Paper beats Rock");
+        humanScore++;
+    }
+    
     // ELSE IF computerChoice IS rock AND humanChoice IS scissors THEN
+    else if ((computerChoice === "rock") && (humanChoice === "scissors")) {
         // PRINT "You lose! Rock beats scissors"
+        console.log("You lose! Rock beats scissors");
+        computerScore++;
+    }
 
     // ELSE IF computerChoice IS paper AND humanChoice IS rock THEN
+    else if ((computerChoice === "paper") && (humanChoice === "rock")) {
         // PRINT "You lose! Paper beats Rock"
-    
+        console.log("You lose! Paper beats Rock");
+        computerScore++;
+    }
+        
     // ELSE IF computerChoice IS paper And humanChoice IS scissors THEN
-        // PRINT "You win! Scissors beats Paper"
+    else if ((computerChoice === "paper") && (humanChoice === "scissors")) {
+         // PRINT "You win! Scissors beats Paper"
+        console.log("You win! Scissors beats Paper");
+        humanScore++;
+    }
     
     // ELSE IF computerChoice IS scissors AND humanChoice IS paper THEN
+    else if ((computerChoice === "paper") && (humanChoice === "scissors")) {
         // PRINT "You lose! Scissors beats Paper"
+        console.log("You lose! Scissors beats Paper");
+        computerScore++;
+    }
 
     // ELSE computerChoice IS paper AND humanChoice IS scissors THEN 
+    else {
         // PRINT "You win! Scissors beats paper"
+        console.log("You win! Scissors beats Paper");
+        humanScore++;
+    }
 }
 
 
