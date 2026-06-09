@@ -7,23 +7,21 @@ function getComputerChoice() {
     // IF randomNumber IS 1 THEN
     if (randomNumber === 1) {
          // RETURN "rock"
-        return "rock";
         console.log("rock");
+        return "rock";
     }
        
     // IF randomNumber IS 2 THEN
     if (randomNumber === 2) {
         // RETURN "paper"
-        return "paper";
         console.log("paper")
+        return "paper";
     }
         
-    // IF randomNumber IS 3 THEN
-    if (randomNumber === 3) {
+    // ELSE
+    else {
         // RETURN "scissors"
-        return "scissors";
         console.log("scissors");
+        return "scissors";
     }
 }
-
-console.log(getComputerChoice());
