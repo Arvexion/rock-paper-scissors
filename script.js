@@ -2,6 +2,11 @@
 let humanScore = 0;
 let computerScore = 0;
 
+// Declare parameters for both choices
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+
 // Function that randomly returns "rock", "paper", or "scissors"
 function getComputerChoice() {
     // SET randomNumber TO random number between 1 and 3
