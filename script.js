@@ -6,7 +6,7 @@ let computerScore = 0;
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-// Function that takes two choices and outputs the results of the round
+// Function that takes two choices and outputs the results of the output
 function playRound(computerChoice, humanChoice) {
     // SET humanChoice TO case-insensitive
 
