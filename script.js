@@ -11,7 +11,7 @@ buttonPlayer.forEach(button => {
     const computerSelection = getComputerChoice();
 
     playRound(computerSelection, humanSelection);
-
+    console.log(`${humanScore} and ${computerScore}`);
     });
 });
 
@@ -36,10 +36,12 @@ function playRound(computerChoice, humanChoice) {
             (humanChoice === "scissors" && computerChoice === "paper")) {
                 results.textContent = `You WIN! ${humanChoice} beats ${computerChoice}`;
                 resultsDiv.replaceChildren(results);
+                humanScore++;
             }   
     else {
        results.textContent = `You LOSE! ${humanChoice} gets beaten by ${computerChoice}`;
        resultsDiv.replaceChildren(results);
+       computerScore++;
     }
 }
 
