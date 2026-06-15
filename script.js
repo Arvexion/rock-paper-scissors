@@ -12,6 +12,19 @@ buttonPlayer.forEach(button => {
 
     playRound(computerSelection, humanSelection);
     console.log(`${humanScore} and ${computerScore}`);
+
+    const gameWinnerArea = document.querySelector('.match-winner')
+    const gameWinner = document.createElement('div');
+    if (humanScore === 5) {
+        gameWinner.textContent = "HUMAN PLAYER HAS WON!";
+        gameWinnerArea.replaceChildren(gameWinner);
+
+    }
+    else if (computerScore === 5) {
+        gameWinner.textContent = "BOT PLAYER HAS WON!";
+        gameWinnerArea.replaceChildren(gameWinner);
+    }
+
     });
 });
 
