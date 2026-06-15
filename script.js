@@ -2,31 +2,21 @@
 let humanScore = 0;
 let computerScore = 0;
 
-// Starts the game
-playGame();
 
-// Function that plays the game 5 times
-function playGame() {
-    // Number of rounds
-    const WINNER_SCORE = 5;
+const buttonPlayer = document.querySelectorAll('button') 
 
-    // LOOP round until one reaches 5 points
-    while (humanScore != 5 || computerScore != 5) {
-        // Declare parameters for both choices
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
+buttonPlayer.forEach(button => {
+    button.addEventListener('click', (event) => {
 
-        playRound(humanSelection, computerSelection);
-    }
+    const humanSelection = event.target.className;
+    const computerSelection = getComputerChoice();
 
-    if (humanScore === 5) {
-        // TODO
-    }
-    else {
-        // TODO
-    }
+    playRound(computerSelection, humanSelection);
 
-}
+    });
+});
+
+
 
 // Function that takes two choices and outputs the results of the output
 function playRound(computerChoice, humanChoice) {
