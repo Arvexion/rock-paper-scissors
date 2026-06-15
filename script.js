@@ -52,21 +52,18 @@ function getComputerChoice() {
     // IF randomNumber IS 1 THEN
     if (randomNumber === 1) {
          // RETURN "rock"
-        console.log("rock");
         return "rock";
     }
        
     // IF randomNumber IS 2 THEN
     if (randomNumber === 2) {
         // RETURN "paper"
-        console.log("paper")
         return "paper";
     }
         
     // ELSE
     else {
         // RETURN "scissors"
-        console.log("scissors");
         return "scissors";
     }
 }
