@@ -8,16 +8,24 @@ playGame();
 // Function that plays the game 5 times
 function playGame() {
     // Number of rounds
-    const ROUNDS = 5;
+    const WINNER_SCORE = 5;
 
-    // LOOP round 5 times
-    for (let i = 0; i < ROUNDS; i++) {
+    // LOOP round until one reaches 5 points
+    while (humanScore != 5 || computerScore != 5) {
         // Declare parameters for both choices
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
 
         playRound(humanSelection, computerSelection);
     }
+
+    if (humanScore === 5) {
+        // TODO
+    }
+    else {
+        // TODO
+    }
+
 }
 
 // Function that takes two choices and outputs the results of the output
