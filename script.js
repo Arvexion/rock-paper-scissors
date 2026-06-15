@@ -2,7 +2,6 @@
 let humanScore = 0;
 let computerScore = 0;
 
-
 const buttonPlayer = document.querySelectorAll('button') 
 
 buttonPlayer.forEach(button => {
@@ -17,24 +16,30 @@ buttonPlayer.forEach(button => {
 });
 
 
-
 // Function that takes two choices and outputs the results of the output
 function playRound(computerChoice, humanChoice) {
     // SET humanChoice TO case-insensitive
     humanChoice = humanChoice.toLowerCase();
 
+    const resultsDiv = document.querySelector('.results')
+    const results = document.createElement('div')
+
     // IF computerChoice IS same as humanChoice THEN
     if (computerChoice === humanChoice) {
         // Print "Tie!"
-        console.log(`It's a TIE! ${humanChoice} equals ${computerChoice}`);
+        results.textContent = `It's a TIE! ${humanChoice} equals ${computerChoice}`;
+        resultsDiv.replaceChildren(results)
+        
     }
     else if ((humanChoice === "rock" && computerChoice === "scissors") || 
             (humanChoice === "paper" && computerChoice === "rock") || 
             (humanChoice === "scissors" && computerChoice === "paper")) {
-                console.log(`You WIN! ${humanChoice} beats ${computerChoice}`);
+                results.textContent = `You WIN! ${humanChoice} beats ${computerChoice}`;
+                resultsDiv.replaceChildren(results);
             }   
     else {
-        console.log(`You LOSE! ${humanChoice} gets beaten by ${computerChoice}`);
+       results.textContent = `You LOSE! ${humanChoice} gets beaten by ${computerChoice}`;
+       resultsDiv.replaceChildren(results);
     }
 }
 
